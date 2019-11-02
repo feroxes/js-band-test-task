@@ -34,7 +34,7 @@
                     <option value="low">Low</option>
                 </select>
             </div>
-            <button class="create-btn base-btn">Create</button>
+            <button id="open-modal-btn" class="create-btn base-btn">Create</button>
         </div>
     </section>
     <section class="tasks-list-wrapper">
@@ -53,10 +53,10 @@
         </div>
     </section>
 
-    <div class="modal-wrapper">
-        <div class="modal">
+    <div id='modal-wrapper' class="modal-wrapper">
+        <div id="modal" class="modal">
             <h2 class="modal-title">Create new item</h2>
-            <form class="add-item-form">
+            <div class="add-item-form">
                 <h3 class="modal-subtitle">Title:</h3>
                 <div class="input-wrapper">
                     <input type="text" placeholder="Title" name="title" class="base-input">
@@ -75,10 +75,10 @@
                     </select>
                 </div>
                 <div class="buttons-wrapper">
-                    <button class="base-btn create-btn">Create</button>
-                    <button class="base-btn cancel-btn">Cancel</button>
+                    <button id="create-btn" class="base-btn create-btn">Create</button>
+                    <button id="cancel-btn" class="base-btn cancel-btn">Cancel</button>
                 </div>
-            </form>
+            </div>
         </div>
     </div>
 </div>
