@@ -1,7 +1,13 @@
 @import "utils/vars";
 @import "utils/mixins";
 @import "utils/fonts";
+@import "utils/base-ui";
 @import "utils/reset";
+
+@import "modules/header";
+@import "modules/menu";
+@import "modules/modal";
+@import "modules/taskList";
 
 html {
   line-height: $mainLineHeight;
@@ -41,16 +47,26 @@ ul, li {
   list-style-type: none;
 }
 
+.app {
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
+}
 section, .section {
   position: relative;
   padding: 40px 0;
+  width: 80vw;
+  margin: 0 auto;
   @media screen and (max-width: $desktopWidth) {
+    max-width: 85vw;
     padding: 36px 0;
   }
-  @media screen and (max-width: $desktopWidth) {
+  @media screen and (max-width: $tableWidth) {
+    width: 90vw;
     padding: 28px 0;
   }
-  @media screen and (max-width: $desktopWidth) {
+  @media screen and (max-width: $phoneWidth) {
+    width: 95vw;
     padding: 20px 0;
   }
 }

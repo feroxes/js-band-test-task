@@ -1,0 +1,21 @@
+// menu style
+
+.menu {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10%;
+  .input-wrapper {
+    width: 30%;
+    margin: 0 10px;
+  }
+  .select-wrapper {
+    width: 15%;
+    margin: 0 10px;
+    position: relative;
+  }
+  .create-btn:hover {
+      background-color: $border-base;
+  }
+}
