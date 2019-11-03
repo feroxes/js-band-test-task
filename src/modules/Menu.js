@@ -10,12 +10,16 @@ const filterTaskList = (list, filterName, filterParameter) => {
   else {
     const filteredList = list.filter((item) => item[filterName] === filterParameter);
     renderList(filteredList);
+    filterName === 'isDone' ? filterPriority.selectedIndex = 0 : filterStatus.selectedIndex = 0;
+    search.value = '';
   }
 };
 
 const searchTask = (list, query) => {
   const searchedList = list.filter((item) => item.title.includes(query));
   renderList(searchedList);
+  filterPriority.selectedIndex = 0;
+  filterStatus.selectedIndex = 0;
 };
 
 search.addEventListener('input', (e) => {
@@ -27,8 +31,8 @@ filterStatus.addEventListener('change', (e) => {
   const { value, name } = e.target;
 
   const formatValue = (val) => {
-    if (val === 'open') return true;
-    if (val === 'done') return false;
+    if (val === 'done') return true;
+    if (val === 'open') return false;
     return val;
   };
 
