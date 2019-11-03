@@ -31,6 +31,15 @@ const setEditElement = (elem) => {
   state.editableElement = elem;
 };
 
+const formValidation = () => {
+  const isValidForm = modal.checkValidity();
+  for (let i = 0; i < modal.length; i++) {
+    if (!modal[i].checkValidity()) modal[i].classList.add('error');
+    else modal[i].classList.remove('error');
+  }
+  return isValidForm;
+};
+
 export const toggleModal = (elem, edit) => {
   state.isModalOpened = !state.isModalOpened;
   state.isModalOpened ? modalWrapper.style.display = 'flex' : modalWrapper.style.display = 'none';
@@ -51,6 +60,7 @@ modalWrapper.addEventListener('click', (e) => {
 
 // Create new Task
 saveBtn.addEventListener('click', () => {
+  if (!formValidation()) return;
   const title = titleInput.value;
   const description = descriptionArea.value;
   const priority = prioritySelect.value;

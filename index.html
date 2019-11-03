@@ -46,10 +46,12 @@
                 <label for="title-input" class="modal-subtitle">Title:</label>
                 <div class="input-wrapper">
                     <input id="title-input" type="text" placeholder="Title" name="title" class="base-input" required>
+                    <span class="error-msg">This field is required.</span>
                 </div>
                 <label for="description-area" class="modal-subtitle">Description:</label>
                 <div class="description-wrapper">
                     <textarea id="description-area" name="description" class="base-text-area" placeholder="Enter description..." required></textarea>
+                    <span class="error-msg">This field is required.</span>
                 </div>
                 <label for="priority-select" class="modal-subtitle">Priority:</label>
                 <div class="select-wrapper">
@@ -59,6 +61,7 @@
                         <option value="normal">Normal</option>
                         <option value="low">Low</option>
                     </select>
+                    <span class="error-msg">This field is required.</span>
                 </div>
                 <div class="buttons-wrapper">
                     <button id="save-btn" class="base-btn save-btn" type="button">Save</button>
