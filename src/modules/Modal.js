@@ -46,8 +46,14 @@ export const toggleModal = (elem, edit) => {
   if (edit) setEditElement(elem);
 };
 
+const closeModal = () => {
+  toggleModal();
+  clearForm();
+};
+
 openModalBtn.addEventListener('click', () => toggleModal());
-cancelBtn.addEventListener('click', () => { toggleModal(); clearForm(); });
+cancelBtn.addEventListener('click', () => closeModal());
+document.addEventListener('keyup', (e) => e.key === 'Escape' && state.isModalOpened && closeModal());
 
 // Handle outside click
 modalWrapper.addEventListener('click', (e) => {

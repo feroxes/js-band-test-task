@@ -22,6 +22,11 @@
       text-align: center;
     }
     .add-item-form {
+      .input-wrapper{
+        .base-input {
+          padding-left: 10px;
+        }
+      }
       .modal-subtitle {
         display: block;
         margin: 15px 0 5px 0;
