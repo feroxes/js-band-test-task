@@ -17,10 +17,14 @@ const removeChildren = (elem) => {
   elem.innerHTML = '';
 };
 
-export const renderList = () => {
+const saveItemToStarage = () => {
+  localStorage.setItem('taskList', JSON.stringify(taskList));
+};
+
+export const renderList = (list = taskList) => {
   const taskListWrapper = document.getElementById('taskListWrapper');
   removeChildren(taskListWrapper);
-  taskList.forEach((item, index) => {
+  list.forEach((item, index) => {
     const { title, description, priority } = item;
     const taskWrapper = createElement('div', { className: item.isDone ? 'task-wrapper done-task' : 'task-wrapper' }, taskListWrapper);
     createElement('h3', { className: 'task-title', innerHTML: title }, taskWrapper);
@@ -39,6 +43,7 @@ export const renderList = () => {
       item.toggleTaskStatus();
       taskWrapper.classList.toggle('done-task');
       toggleBtn(item, controls);
+      saveItemToStarage();
     });
 
     editBtn.addEventListener('click', () => {
@@ -47,8 +52,9 @@ export const renderList = () => {
     });
 
     deleteBtn.addEventListener('click', () => {
-      taskList.splice(index, 1);
+      list.splice(index, 1);
       renderList();
     });
   });
+  saveItemToStarage();
 };

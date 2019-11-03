@@ -1,10 +1,10 @@
 export default class Task {
-  constructor(title, description, priority, id) {
+  constructor(title, description, priority, id, isDone = false) {
     this.title = title;
     this.description = description;
     this.priority = priority;
     this.id = id;
-    this.isDone = false;
+    this.isDone = isDone;
     this.isControlsOpened = false;
   }
 
@@ -25,6 +25,6 @@ export default class Task {
   }
 
   toggleControls() {
-    this.isControlsOpened = !this.isControlsOpened
+    this.isControlsOpened = !this.isControlsOpened;
   }
 }
