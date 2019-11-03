@@ -1,3 +1,4 @@
+// Main task list array
 export const taskList = [];
 
 export const setTaskList = (list) => {

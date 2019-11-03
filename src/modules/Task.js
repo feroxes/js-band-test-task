@@ -1,3 +1,5 @@
+// Default task item class
+
 export default class Task {
   constructor(title, description, priority, id, isDone = false) {
     this.title = title;
