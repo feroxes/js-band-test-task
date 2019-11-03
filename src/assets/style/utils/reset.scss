@@ -20,6 +20,7 @@ time, mark, audio, video {
 
 // Links
 a {
+  color: $mainFontColor;
   text-decoration: none;
   &:active, &:hover {
     outline: 0;

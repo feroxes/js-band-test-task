@@ -1,6 +1,7 @@
 .tasks-list-wrapper {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   .task-wrapper {
     width: 250px;
     height: 300px;

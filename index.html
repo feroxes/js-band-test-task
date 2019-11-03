@@ -40,18 +40,18 @@
     <section class="tasks-list-wrapper" id="taskListWrapper"></section>
 
     <div id='modal-wrapper' class="modal-wrapper">
-        <div id="modal" class="modal">
+        <form id="modal" class="modal">
             <h2 class="modal-title">Create new item</h2>
             <div class="add-item-form">
-                <h3 class="modal-subtitle">Title:</h3>
+                <label for="title-input" class="modal-subtitle">Title:</label>
                 <div class="input-wrapper">
                     <input id="title-input" type="text" placeholder="Title" name="title" class="base-input" required>
                 </div>
-                <h3 class="modal-subtitle">Description:</h3>
+                <label for="description-area" class="modal-subtitle">Description:</label>
                 <div class="description-wrapper">
                     <textarea id="description-area" name="description" class="base-text-area" placeholder="Enter description..." required></textarea>
                 </div>
-                <h3 class="modal-subtitle">Priority:</h3>
+                <label for="priority-select" class="modal-subtitle">Priority:</label>
                 <div class="select-wrapper">
                     <select id="priority-select" name="priority" class="base-select" required>
                         <option disabled selected value>Select an option</option>
@@ -61,12 +61,18 @@
                     </select>
                 </div>
                 <div class="buttons-wrapper">
-                    <button id="save-btn" class="base-btn save-btn">Save</button>
-                    <button id="cancel-btn" class="base-btn cancel-btn">Cancel</button>
+                    <button id="save-btn" class="base-btn save-btn" type="button">Save</button>
+                    <button id="cancel-btn" class="base-btn cancel-btn" type="button">Cancel</button>
                 </div>
             </div>
-        </div>
+        </form>
     </div>
+
+    <footer class="footer">
+        Created by
+        <a href="https://github.com/feroxes" target="_blank">feroxes</a>
+        &copy; 2019
+    </footer>
 </div>
 <script src="./dist/app.js"></script>
 </body>
