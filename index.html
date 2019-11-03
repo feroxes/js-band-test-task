@@ -37,21 +37,7 @@
             <button id="open-modal-btn" class="create-btn base-btn">Create</button>
         </div>
     </section>
-    <section class="tasks-list-wrapper">
-        <div class="task-wrapper">
-            <h3 class="task-title">First task</h3>
-            <p class="task-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <div class="controls-wrapper">
-                <p class="task-priority">High</p>
-                <button class="base-btn controls-btn">. . .</button>
-                <ul class="controls">
-                    <li class="controls-item">Done</li>
-                    <li class="controls-item">Edit</li>
-                    <li class="controls-item">Delete</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+    <section class="tasks-list-wrapper" id="taskListWrapper"></section>
 
     <div id='modal-wrapper' class="modal-wrapper">
         <div id="modal" class="modal">
@@ -59,23 +45,23 @@
             <div class="add-item-form">
                 <h3 class="modal-subtitle">Title:</h3>
                 <div class="input-wrapper">
-                    <input type="text" placeholder="Title" name="title" class="base-input">
+                    <input id="title-input" type="text" placeholder="Title" name="title" class="base-input" required>
                 </div>
                 <h3 class="modal-subtitle">Description:</h3>
                 <div class="description-wrapper">
-                    <textarea name="description" id="description" class="base-text-area"></textarea>
+                    <textarea id="description-area" name="description" class="base-text-area" placeholder="Enter description..." required></textarea>
                 </div>
                 <h3 class="modal-subtitle">Priority:</h3>
                 <div class="select-wrapper">
-                    <select name="priority" class="base-select">
-                        <option value="all" selected>All</option>
+                    <select id="priority-select" name="priority" class="base-select" required>
+                        <option disabled selected value>Select an option</option>
                         <option value="high">High</option>
                         <option value="normal">Normal</option>
                         <option value="low">Low</option>
                     </select>
                 </div>
                 <div class="buttons-wrapper">
-                    <button id="create-btn" class="base-btn create-btn">Create</button>
+                    <button id="save-btn" class="base-btn save-btn">Save</button>
                     <button id="cancel-btn" class="base-btn cancel-btn">Cancel</button>
                 </div>
             </div>

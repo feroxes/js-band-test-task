@@ -35,12 +35,12 @@
         justify-content: space-between;
         align-items: center;
         margin: 20px 0 10px 0;
-        .create-btn, .cancel-btn{
+        .save-btn, .cancel-btn{
           width: 47%;
           border: none;
           color: $default-color;
         }
-        .create-btn {
+        .save-btn {
           background-color: $success-color;
         }
         .cancel-btn {
