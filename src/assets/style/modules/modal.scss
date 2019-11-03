@@ -1,0 +1,58 @@
+.modal-wrapper {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: $boxShadow;
+  position: fixed;
+  overflow: auto;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  .modal {
+    min-width: 310px;
+    width: 30%;
+    background-color: $default-color;
+    border-radius: 10px;
+    padding: 20px;
+    .modal-title {
+      font-size: rem(27);
+      font-weight: 700;
+      text-align: center;
+    }
+    .add-item-form {
+      .input-wrapper{
+        .base-input {
+          padding-left: 10px;
+        }
+      }
+      .modal-subtitle {
+        display: block;
+        margin: 15px 0 5px 0;
+        font-weight: 700;
+      }
+      .description-wrapper {
+        height: 100px;
+      }
+      .buttons-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px 0 10px 0;
+        .save-btn, .cancel-btn{
+          width: 47%;
+          border: none;
+          color: $default-color;
+        }
+        .save-btn {
+          background-color: $success-color;
+        }
+        .cancel-btn {
+          background-color: $danger-color;
+        }
+      }
+    }
+  }
+}

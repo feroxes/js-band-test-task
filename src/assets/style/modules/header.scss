@@ -1,1 +1,12 @@
 // header style
+
+.header {
+  height: 80px;
+  width: 100%;
+  font-size: rem(30);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  box-shadow: 0 3px 15px -9px $boxShadow;
+}

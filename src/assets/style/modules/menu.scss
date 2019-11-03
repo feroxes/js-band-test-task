@@ -1,0 +1,39 @@
+// menu style
+
+.menu {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10%;
+  .input-wrapper {
+    width: 35%;
+    margin: 0 10px;
+    position: relative;
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 7px;
+      left: 7px;
+      width: 18px;
+      height: 18px;
+      background: url("https://image.flaticon.com/icons/svg/149/149852.svg") center no-repeat;
+      z-index: 2;
+    }
+  }
+  .select-wrapper {
+    width: 20%;
+    margin: 0 10px;
+    position: relative;
+  }
+  .create-btn:hover {
+      background-color: $border-base;
+  }
+}
+
+@media screen and (max-width: $tableWidth) {
+  .menu {
+    padding: 0;
+  }
+}
