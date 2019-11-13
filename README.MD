@@ -19,3 +19,5 @@ Open [http://localhost:8080](http://localhost:8080) to view it in the browser.
 - Search todo-item by title;
 - Filter todo-item by status;
 - Filter todo-item by priority.
+
+<a href=https://feroxes.github.io/js-band-test-task/>Demo</a>
