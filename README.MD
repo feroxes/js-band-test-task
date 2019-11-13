@@ -1,5 +1,7 @@
 # To do list
 
+### Ciklum University: JS Band Internship. Test task
+
 ### To start project you need to:
 
 ##### `git clone` this repo
@@ -20,4 +22,4 @@ Open [http://localhost:8080](http://localhost:8080) to view it in the browser.
 - Filter todo-item by status;
 - Filter todo-item by priority.
 
-<a href=https://feroxes.github.io/js-band-test-task/>Demo</a>
+<a href=https://feroxes.github.io/js-band-test-task target="_blank"/>Demo</a>
